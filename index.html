@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>Crystals Collector</title>
+    
+    <!-- Link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      
+    <!-- Link to css -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Crystals Collector</title>
+    <!-- Link to reset css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
 
-  <!-- Link to Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- Link to jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Link to css -->
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
 
-<body>
-
-  <!-- Bootstrap Container will hold everything -->
-  <div class="container">
-    <!-- Jumbotron holds the title section -->
-    <div class="jumbotron">
-        <div class="container">
+  </head>
+    
+    <body>
+      
+      <!-- Bootstrap Container will hold everything -->
+      <div class="container">
+        <!-- Jumbotron holds the title section -->
+        <div class="jumbotron">
+          <div class="container">
             <h1>Crystals Collector!</h1>
+          </div>
         </div>
-    </div>
-
-    <!-- Game counters all held here. Panels are being used to hold various sections. -->
-    <div class="row">
-      <div class="col-lg-12">
-
-        <!-- First Panel: Directions -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
+        
+        <!-- Game counters all held here. Panels are being used to hold various sections. -->
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <!-- First Panel: Directions -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
                 <h3 class="panel-title"><strong>Directions</strong></h3>
-            </div>
-                <div class="panel-body">
+              </div>
+              <div class="panel-body">
                 
-                    <div id="directions-explained">
-                        <p>You will be given a random number at the start of the game.</p>
-                        <br>
-                        <p>There are four crystals below. By clicking on a crystal you will add a specific amout of points to your total score.</p>
-                        <br>
-                        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-                        <br>
-                        <p>The value of each crystal is hidden from you until you click on it.</p>
-                        <br>
-                        <p>Each time when the game starts, the game will change the values of each crystal.</p>
-                    </div>
+                <div id="directions-explained">
+                  <p>You will be given a random number at the start of the game.</p>
+                  <br>
+                  <p>There are four crystals below. By clicking on a crystal you will add a specific amout of points to your total score.</p>
+                  <br>
+                  <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+                  <br>
+                  <p>The value of each crystal is hidden from you until you click on it.</p>
+                  <br>
+                  <p>Each time when the game starts, the game will change the values of each crystal.</p>
                 </div>
-        </div>
-
-        <!-- Second Panel: The score user has to beat -->
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <strong>Score to beat: </strong> <span id="score-to-beat"></span>
-          </div>
-        </div>
-        
-        <!-- Third Panel: Win and Loss counter -->
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="col-6">
-              <strong>Wins: </strong> <span id="win-counter">0</span>
+              </div>
             </div>
-            <div class="col-6">
-              <strong>Losses: </strong> <span id="loss-counter">0</span>
+            
+            <!-- Second Panel: The score user has to beat -->
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <strong>Score to WIN:  </strong> <span id="score-to-beat"></span>
+              </div>
             </div>
-          </div>
-        </div>
-        
-        
-        <!-- Fourth Panel: crystals -->
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3 class="panel-title"><strong>Choose your crystals!</strong></h3>
-              <img src="assets/images/Ruby_.png" id="img-ruby" class="crystals" alt="Ruby" height="80px" width="80px">
-              <img src="assets/images/diamond.png" id="img-diamond" class="crystals" alt="Diamond" height="80px" width="80px">
-              <img src="assets/images/emerald.jpg" id="img-emerald" class="crystals" alt="Emerald" height="80px" width="80px">
-              <img src="assets/images/gem.jpg" id="img-gem" class="crystals" alt="Gem" height="80px" width="80px">
-          </div>
-        </div>
-
-
-        <!-- Fifth Panel: total score -->
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <strong>Total Score: </strong> <span id="total">0</span>
+            
+            <!-- Third Panel: Win and Loss counter -->
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="col-6">
+                  <strong>Wins:  </strong> <span id="win-counter">0</span>
+                </div>
+                <div class="col-6">
+                  <strong>Losses:  </strong> <span id="loss-counter">0</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Fourth Panel: crystals -->
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h3 class="panel-title"><strong>Choose your crystals!</strong></h3>
+                <img src="assets/images/Ruby_.png" id="img-ruby" class="crystals" alt="Ruby" height="80px" width="80px">
+                <img src="assets/images/diamond.png" id="img-diamond" class="crystals" alt="Diamond" height="80px" width="80px">
+                <img src="assets/images/emerald.jpg" id="img-emerald" class="crystals" alt="Emerald" height="80px" width="80px">
+                <img src="assets/images/gem.jpg" id="img-gem" class="crystals" alt="Gem" height="80px" width="80px">
+              </div>
+            </div>
+            
+            
+            <!-- Fifth Panel: total score -->
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <strong>Total Score:  </strong> <span id="total">0</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- this is where code starts -->
-  
-</body>
-
-</html>
+      
+      <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+      <script type= "text/javascript" src="assets/javascript/game.js"></script>
+    </body>
+    
+    </html>
+    

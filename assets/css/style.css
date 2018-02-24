@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(125, 228, 228);
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jumbotron {
+    background-color: lightyellow;
+    height: 100%;
+    width: 100%;
+    border: double;
+    color: rgb(43, 255, 0);
+    font-family: cursive;
+}
+
+.panel-title{
+    font-style: italic;
+    font-size: 20px
+}
+
+.panel-body {
+    background-color: lightyellow;
+
+}
+#score-to-beat{
+    font-size: 50px;
+}
+
+#total {
+    font-size: 50px;
+}
